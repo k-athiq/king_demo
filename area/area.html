@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <title>Area Converter</title>
+        <meta name="description" content="Free online area converter - converts between 40 units of area, including square meter [m^2], square kilometer [km^2], square centimeter [cm^2], square millimeter [mm^2], etc. Also, explore many other unit converters or learn more about area unit conversions."/>
+        <link rel="stylesheet" href="D:\shummu\Documents\un 1\HTML\style-n.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="D:\shummu\Documents\un 1\HTML\js\common.js" async></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="//d15gdne58bo42a.cloudfront.net/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="//d15gdne58bo42a.cloudfront.net/icon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="//d15gdne58bo42a.cloudfront.net/icon-16x16.png">
+        <link rel="manifest" href="D:\shummu\Documents\un 1\HTML\manifest.json">
+    </head>
+    <body>
+        <div id="headerout">
+            <div id="header">
+                <div id="logo">
+                    <a href="/">
+                        <img src="//d15gdne58bo42a.cloudfront.net/images/logo.svg" width="288" height="28" alt="UnitConverters.net">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="clear"></div>
+        <div id="contentout">
+            <div id="content">
+                <img src="//d15gdne58bo42a.cloudfront.net/images/calculator.svg" width="22" height="31" align="right" border="0" onClick="quickCaclShow('');" alt="calculator">
+                <div class="topnav">
+                    <a href="D:\shummu\Documents\un 1\HTML\uc.html">Home</a>
+                    / <a href='D:\shummu\Documents\un 1\HTML\common converter.html'>Common Converters</a>
+                    / Area Converter
+                </div>
+                <h1>Area Converter</h1>
+                <div id="unquickcalc" style="display:none;"></div>
+                <div id="ucresult" class="ucresulttext"></div>
+                <form>
+                    <table id="uctable">
+                        <tr>
+                            <td class="uccell">
+                                <label for="ucfrom">From:</label>
+                                <br>
+                                <input type="text" name="ucfrom" class="ucinput" id="ucfrom" onKeyUp="ucUpdateResult();" autofocus>
+                            </td>
+                            <td class="uccell">
+                                <label for="ucto">To:</label>
+                                <br>
+                                <input type="text" name="ucto" class="ucinput" id="ucto" style="background-color:#eeeeee;" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uccell">
+                                <select name="ucfromunit" id="ucfromunit" size="15" onChange="ucUpdateResult();" class="ucselect">
+                                    <option value="square meter [m^2] [1.0E+15]" selected>square meter [m^2]</option>
+                                    <option value="square kilometer [km^2] [1000000000]">square kilometer [km^2]</option>
+                                    <option value="square centimeter [cm^2] [1.0E+19]">square centimeter [cm^2]</option>
+                                    <option value="square millimeter [mm^2] [1.0E+21]">square millimeter [mm^2]</option>
+                                    <option value="square micrometer [&#181;m^2] [1.0E+27]">square micrometer [&#181;m^2]</option>
+                                    <option value="hectare [ha] [100000000000]">hectare [ha]</option>
+                                    <option value="acre [ac] [247105381467.17]">acre [ac]</option>
+                                    <option value="square mile [mi^2] [386102158.54245]">square mile [mi^2]</option>
+                                    <option value="square yard [yd^2] [1.1959900463011E+15]">square yard [yd^2]</option>
+                                    <option value="square foot [ft^2] [1.076391041671E+16]">square foot [ft^2]</option>
+                                    <option value="square inch [in^2] [1.5500031000062E+18]">square inch [in^2]</option>
+                                    <option value="square hectometer [hm^2] [100000000000]">square hectometer [hm^2]</option>
+                                    <option value="square dekameter [dam^2] [10000000000000]">square dekameter [dam^2]</option>
+                                    <option value="square decimeter [dm^2] [1.0E+17]">square decimeter [dm^2]</option>
+                                    <option value="square nanometer [nm^2] [1.0E+33]">square nanometer [nm^2]</option>
+                                    <option value="are [a] [10000000000000]">are [a]</option>
+                                    <option value="barn [b] [1.0E+43]">barn [b]</option>
+                                    <option value="square mile (US survey) [386100614.13536]">square mile (US survey)</option>
+                                    <option value="square foot (US survey) [1.0763867361111E+16]">square foot (US survey)</option>
+                                    <option value="circular inch [1.97352524139E+18]">circular inch</option>
+                                    <option value="township [10725059.959512]">township</option>
+                                    <option value="section [386102158.54245]">section</option>
+                                    <option value="acre (US survey) [ac] [247104393046.63]">acre (US survey) [ac]</option>
+                                    <option value="rood [988421525868.66]">rood</option>
+                                    <option value="square chain [ch^2] [2471053814671.6]">square chain [ch^2]</option>
+                                    <option value="square rod [39536861034746]">square rod</option>
+                                    <option value="square rod (US survey) [39536702887460]">square rod (US survey)</option>
+                                    <option value="square perch [39536861034746]">square perch</option>
+                                    <option value="square pole [39536861034746]">square pole</option>
+                                    <option value="square mil [mil^2] [1.5500031000062E+24]">square mil [mil^2]</option>
+                                    <option value="circular mil [1.97352524139E+24]">circular mil</option>
+                                    <option value="homestead [1544408634.1698]">homestead</option>
+                                    <option value="sabin [1.076391041671E+16]">sabin</option>
+                                    <option value="arpent [292492342500]">arpent</option>
+                                    <option value="cuerda [254427313535.39]">cuerda</option>
+                                    <option value="plaza [156250000000]">plaza</option>
+                                    <option value="varas castellanas cuad [1.4311536386366E+15]">varas castellanas cuad</option>
+                                    <option value="varas conuqueras cuad [1.5901707095962E+14]">varas conuqueras cuad</option>
+                                    <option value="Electron cross section [1.5032029647492E+43]">Electron cross section</option>
+                                </select>
+                            </td>
+                            <td class="uccell">
+                                <select name="uctounit" id="uctounit" size="15" onChange="ucUpdateResult();" class="ucselect">
+                                    <option value="square meter [m^2] [1.0E+15]">square meter [m^2]</option>
+                                    <option value="square kilometer [km^2] [1000000000]" selected>square kilometer [km^2]</option>
+                                    <option value="square centimeter [cm^2] [1.0E+19]">square centimeter [cm^2]</option>
+                                    <option value="square millimeter [mm^2] [1.0E+21]">square millimeter [mm^2]</option>
+                                    <option value="square micrometer [&#181;m^2] [1.0E+27]">square micrometer [&#181;m^2]</option>
+                                    <option value="hectare [ha] [100000000000]">hectare [ha]</option>
+                                    <option value="acre [ac] [247105381467.17]">acre [ac]</option>
+                                    <option value="square mile [mi^2] [386102158.54245]">square mile [mi^2]</option>
+                                    <option value="square yard [yd^2] [1.1959900463011E+15]">square yard [yd^2]</option>
+                                    <option value="square foot [ft^2] [1.076391041671E+16]">square foot [ft^2]</option>
+                                    <option value="square inch [in^2] [1.5500031000062E+18]">square inch [in^2]</option>
+                                    <option value="square hectometer [hm^2] [100000000000]">square hectometer [hm^2]</option>
+                                    <option value="square dekameter [dam^2] [10000000000000]">square dekameter [dam^2]</option>
+                                    <option value="square decimeter [dm^2] [1.0E+17]">square decimeter [dm^2]</option>
+                                    <option value="square nanometer [nm^2] [1.0E+33]">square nanometer [nm^2]</option>
+                                    <option value="are [a] [10000000000000]">are [a]</option>
+                                    <option value="barn [b] [1.0E+43]">barn [b]</option>
+                                    <option value="square mile (US survey) [386100614.13536]">square mile (US survey)</option>
+                                    <option value="square foot (US survey) [1.0763867361111E+16]">square foot (US survey)</option>
+                                    <option value="circular inch [1.97352524139E+18]">circular inch</option>
+                                    <option value="township [10725059.959512]">township</option>
+                                    <option value="section [386102158.54245]">section</option>
+                                    <option value="acre (US survey) [ac] [247104393046.63]">acre (US survey) [ac]</option>
+                                    <option value="rood [988421525868.66]">rood</option>
+                                    <option value="square chain [ch^2] [2471053814671.6]">square chain [ch^2]</option>
+                                    <option value="square rod [39536861034746]">square rod</option>
+                                    <option value="square rod (US survey) [39536702887460]">square rod (US survey)</option>
+                                    <option value="square perch [39536861034746]">square perch</option>
+                                    <option value="square pole [39536861034746]">square pole</option>
+                                    <option value="square mil [mil^2] [1.5500031000062E+24]">square mil [mil^2]</option>
+                                    <option value="circular mil [1.97352524139E+24]">circular mil</option>
+                                    <option value="homestead [1544408634.1698]">homestead</option>
+                                    <option value="sabin [1.076391041671E+16]">sabin</option>
+                                    <option value="arpent [292492342500]">arpent</option>
+                                    <option value="cuerda [254427313535.39]">cuerda</option>
+                                    <option value="plaza [156250000000]">plaza</option>
+                                    <option value="varas castellanas cuad [1.4311536386366E+15]">varas castellanas cuad</option>
+                                    <option value="varas conuqueras cuad [1.5901707095962E+14]">varas conuqueras cuad</option>
+                                    <option value="Electron cross section [1.5032029647492E+43]">Electron cross section</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <script>
+                    noValidation = 0;
+                </script>
+                <br>
+                <h3>Popular area unit conversions</h3>
+                <div id="toother">
+                    <div>
+                        <a href="/area/acres-to-square-feet.htm">acres to square feet</a>
+                    </div>
+                    <div>
+                        <a href="/area/square-feet-to-acres.htm">square feet to acres</a>
+                    </div>
+                    <div>
+                        <a href="/area/hectare-to-acres.htm">hectare to acres</a>
+                    </div>
+                    <div>
+                        <a href="/area/acres-to-hectare.htm">acres to hectare</a>
+                    </div>
+                    <div>
+                        <a href="/area/square-feet-to-square-meter.htm">square feet to square meter</a>
+                    </div>
+                    <div>
+                        <a href="/area/square-meter-to-square-feet.htm">square meter to square feet</a>
+                    </div>
+                    <div>
+                        <a href="/area/acres-to-square-miles.htm">acres to square miles</a>
+                    </div>
+                    <div>
+                        <a href="/area/square-miles-to-acres.htm">square miles to acres</a>
+                    </div>
+                    <div>
+                        <a href="/area/square-feet-to-square-yards.htm">square feet to square yards</a>
+                    </div>
+                    <div>
+                        <a href="/area/square-yards-to-square-feet.htm">square yards to square feet</a>
+                    </div>
+                </div>
+                <br>
+                <h3>Complete list of area units for conversion</h3>
+                <ul class="allunits">
+                    <li>square meter [m^2]</li>
+                    <li>
+                        1 square kilometer [km^2] = 1000000 square meter [m^2]
+                        <div>
+                            <a href="/area/square-kilometer-to-square-meter.htm">square kilometer to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-kilometer.htm">square meter to square kilometer</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square centimeter [cm^2] = 0.0001 square meter [m^2]
+                        <div>
+                            <a href="/area/square-centimeter-to-square-meter.htm">square centimeter to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-centimeter.htm">square meter to square centimeter</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square millimeter [mm^2] = 1.0E-6 square meter [m^2]
+                        <div>
+                            <a href="/area/square-millimeter-to-square-meter.htm">square millimeter to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-millimeter.htm">square meter to square millimeter</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square micrometer [&#181;m^2] = 1.0E-12 square meter [m^2]
+                        <div>
+                            <a href="/area/square-micrometer-to-square-meter.htm">square micrometer to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-micrometer.htm">square meter to square micrometer</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 hectare [ha] = 10000 square meter [m^2]
+                        <div>
+                            <a href="/area/hectare-to-square-meter.htm">hectare to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-hectare.htm">square meter to hectare</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 acre [ac] = 4046.8564224 square meter [m^2]
+                        <div>
+                            <a href="/area/acre-to-square-meter.htm">acre to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-acre.htm">square meter to acre</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square mile [mi^2] = 2589988.110336 square meter [m^2]
+                        <div>
+                            <a href="/area/square-mile-to-square-meter.htm">square mile to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-mile.htm">square meter to square mile</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square yard [yd^2] = 0.83612736 square meter [m^2]
+                        <div>
+                            <a href="/area/square-yard-to-square-meter.htm">square yard to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-yard.htm">square meter to square yard</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square foot [ft^2] = 0.09290304 square meter [m^2]
+                        <div>
+                            <a href="/area/square-feet-to-square-meter.htm">square foot to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-feet.htm">square meter to square foot</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square inch [in^2] = 0.00064516 square meter [m^2]
+                        <div>
+                            <a href="/area/square-inch-to-square-meter.htm">square inch to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-inch.htm">square meter to square inch</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square hectometer [hm^2] = 10000 square meter [m^2]
+                        <div>
+                            <a href="/area/square-hectometer-to-square-meter.htm">square hectometer to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-hectometer.htm">square meter to square hectometer</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square dekameter [dam^2] = 100 square meter [m^2]
+                        <div>
+                            <a href="/area/square-dekameter-to-square-meter.htm">square dekameter to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-dekameter.htm">square meter to square dekameter</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square decimeter [dm^2] = 0.01 square meter [m^2]
+                        <div>
+                            <a href="/area/square-decimeter-to-square-meter.htm">square decimeter to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-decimeter.htm">square meter to square decimeter</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square nanometer [nm^2] = 1.0E-18 square meter [m^2]
+                        <div>
+                            <a href="/area/square-nanometer-to-square-meter.htm">square nanometer to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-nanometer.htm">square meter to square nanometer</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 are [a] = 100 square meter [m^2]
+                        <div>
+                            <a href="/area/are-to-square-meter.htm">are to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-are.htm">square meter to are</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 barn [b] = 1.0E-28 square meter [m^2]
+                        <div>
+                            <a href="/area/barn-to-square-meter.htm">barn to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-barn.htm">square meter to barn</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square mile (US survey) = 2589998.4703195 square meter [m^2]
+                        <div>
+                            <a href="/area/square-mile-us-survey-to-square-meter.htm">square mile (US survey) to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-mile-us-survey.htm">square meter to square mile (US survey)</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square foot (US survey) = 0.0929034116 square meter [m^2]
+                        <div>
+                            <a href="/area/square-foot-us-survey-to-square-meter.htm">square foot (US survey) to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-foot-us-survey.htm">square meter to square foot (US survey)</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 circular inch = 0.0005067075 square meter [m^2]
+                        <div>
+                            <a href="/area/circular-inch-to-square-meter.htm">circular inch to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-circular-inch.htm">square meter to circular inch</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 township = 93239571.972096 square meter [m^2]
+                        <div>
+                            <a href="/area/township-to-square-meter.htm">township to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-township.htm">square meter to township</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 section = 2589988.110336 square meter [m^2]
+                        <div>
+                            <a href="/area/section-to-square-meter.htm">section to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-section.htm">square meter to section</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 acre (US survey) [ac] = 4046.8726098743 square meter [m^2]
+                        <div>
+                            <a href="/area/acre-us-survey-to-square-meter.htm">acre (US survey) to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-acre-us-survey.htm">square meter to acre (US survey)</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 rood = 1011.7141056 square meter [m^2]
+                        <div>
+                            <a href="/area/rood-to-square-meter.htm">rood to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-rood.htm">square meter to rood</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square chain [ch^2] = 404.68564224 square meter [m^2]
+                        <div>
+                            <a href="/area/square-chain-to-square-meter.htm">square chain to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-chain.htm">square meter to square chain</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square rod = 25.29285264 square meter [m^2]
+                        <div>
+                            <a href="/area/square-rod-to-square-meter.htm">square rod to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-rod.htm">square meter to square rod</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square rod (US survey) = 25.2929538117 square meter [m^2]
+                        <div>
+                            <a href="/area/square-rod-us-survey-to-square-meter.htm">square rod (US survey) to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-rod-us-survey.htm">square meter to square rod (US survey)</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square perch = 25.29285264 square meter [m^2]
+                        <div>
+                            <a href="/area/square-perch-to-square-meter.htm">square perch to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-perch.htm">square meter to square perch</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square pole = 25.29285264 square meter [m^2]
+                        <div>
+                            <a href="/area/square-pole-to-square-meter.htm">square pole to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-pole.htm">square meter to square pole</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 square mil [mil^2] = 6.4516E-10 square meter [m^2]
+                        <div>
+                            <a href="/area/square-mil-to-square-meter.htm">square mil to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-square-mil.htm">square meter to square mil</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 circular mil = 5.067074790975E-10 square meter [m^2]
+                        <div>
+                            <a href="/area/circular-mil-to-square-meter.htm">circular mil to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-circular-mil.htm">square meter to circular mil</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 homestead = 647497.027584 square meter [m^2]
+                        <div>
+                            <a href="/area/homestead-to-square-meter.htm">homestead to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-homestead.htm">square meter to homestead</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 sabin = 0.09290304 square meter [m^2]
+                        <div>
+                            <a href="/area/sabin-to-square-meter.htm">sabin to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-sabin.htm">square meter to sabin</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 arpent = 3418.8929236669 square meter [m^2]
+                        <div>
+                            <a href="/area/arpent-to-square-meter.htm">arpent to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-arpent.htm">square meter to arpent</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 cuerda = 3930.395625 square meter [m^2]
+                        <div>
+                            <a href="/area/cuerda-to-square-meter.htm">cuerda to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-cuerda.htm">square meter to cuerda</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 plaza = 6400 square meter [m^2]
+                        <div>
+                            <a href="/area/plaza-to-square-meter.htm">plaza to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-plaza.htm">square meter to plaza</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 varas castellanas cuad = 0.698737 square meter [m^2]
+                        <div>
+                            <a href="/area/varas-castellanas-cuad-to-square-meter.htm">varas castellanas cuad to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-varas-castellanas-cuad.htm">square meter to varas castellanas cuad</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 varas conuqueras cuad = 6.288633 square meter [m^2]
+                        <div>
+                            <a href="/area/varas-conuqueras-cuad-to-square-meter.htm">varas conuqueras cuad to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-varas-conuqueras-cuad.htm">square meter to varas conuqueras cuad</a>
+                        </div>
+                    </li>
+                    <li>
+                        1 Electron cross section = 6.6524615999999E-29 square meter [m^2]
+                        <div>
+                            <a href="/area/electron-cross-section-to-square-meter.htm">Electron cross section to square meter</a>
+                            , &nbsp;<a href="/area/square-meter-to-electron-cross-section.htm">square meter to Electron cross section</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="right">
+                <div id="rightAdUnit" style="text-align:center;">
+                    <div style="min-height:280px; text-align:center;">
+                        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+                        <script>
+                            window.googletag = window.googletag || {
+                                cmd: []
+                            };
+                            googletag.cmd.push(function() {
+                                googletag.defineSlot('/1057446/UnitConverters-Top-Right-Desktop', [[336, 280], [300, 250]], 'div-gpt-ad-1589566514232-0').addService(googletag.pubads());
+                                googletag.pubads().enableSingleRequest();
+                                googletag.enableServices();
+                            });
+                        </script>
+                        <!-- /1057446/UnitConverters-Top-Right-Desktop -->
+                        <div id='div-gpt-ad-1589566514232-0'>
+                            <script>
+                                googletag.cmd.push(function() {
+                                    googletag.display('div-gpt-ad-1589566514232-0');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div id="othercalc"></div>
+                <script>
+                    var navSectionName = "Common Converters";
+                </script>
+            </div>
+        </div>
+        <div id="clear"></div>
+        <div id="footer">
+            <div id="footerin">
+                <div id="footernav">
+                    <a href="/about-us.php">about us</a>
+                    | <a href="/about-us.php#terms">terms of use</a>
+                    | <a href="/about-us.php#privacy">privacy policy</a>
+                    | <a href="/sitemap.php">sitemap</a>
+                    &nbsp;&copy;2008 - 2023 <a href="https://www.unitconverters.net">unitconverters.net</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
